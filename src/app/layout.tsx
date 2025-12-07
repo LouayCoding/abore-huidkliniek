@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { lexend, marcellus } from "@/lib/fonts";
 import "./globals.css";
 import { CookieBanner } from "@/components/site/cookie-banner";
@@ -83,6 +84,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
