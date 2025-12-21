@@ -1,16 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
-import { syne } from "@/lib/fonts";
+import { outfit } from "@/lib/fonts";
+import { whatsappConfig } from "@/data/site-config";
+import { getWhatsAppUrl } from "@/lib/env";
+import { TOOLTIP_SHOW_DELAY, TOOLTIP_HIDE_DELAY } from "@/lib/constants";
 
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const phoneNumber = "31634533358";
-  const prefilledMessage = "Hallo! Ik heb een vraag over jullie behandelingen bij Aboré Huidkliniek.";
-  
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(prefilledMessage)}`;
+  const whatsappUrl = getWhatsAppUrl(whatsappConfig.defaultMessage);
 
   useEffect(() => {
     // Show button immediately on page load
@@ -26,9 +26,8 @@ export function WhatsAppButton() {
     if (isVisible) {
       const timer = setTimeout(() => {
         setShowTooltip(true);
-        // Hide tooltip after 5 seconds
-        setTimeout(() => setShowTooltip(false), 5000);
-      }, 2000);
+        setTimeout(() => setShowTooltip(false), TOOLTIP_HIDE_DELAY);
+      }, TOOLTIP_SHOW_DELAY);
       return () => clearTimeout(timer);
     }
   }, [isVisible]);
@@ -47,7 +46,7 @@ export function WhatsAppButton() {
             showTooltip && !isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
           }`}
         >
-          <div className={`${syne.className} bg-white rounded-xl shadow-lg px-4 py-3 text-sm text-zinc-700 whitespace-nowrap border border-zinc-100`}>
+          <div className={`${outfit.className} bg-white rounded-xl shadow-lg px-4 py-3 text-sm text-zinc-700 whitespace-nowrap border border-zinc-100`}>
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -66,7 +65,7 @@ export function WhatsAppButton() {
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
           }`}
         >
-          <div className={`${syne.className} bg-white rounded-xl shadow-xl px-5 py-4 text-sm border border-zinc-100 w-64`}>
+          <div className={`${outfit.className} bg-white rounded-xl shadow-xl px-5 py-4 text-sm border border-zinc-100 w-64`}>
             <div className="flex items-center gap-3 mb-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500">
                 <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">

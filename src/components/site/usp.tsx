@@ -1,38 +1,29 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
-import { SplitText } from "@/components/animations/split-text";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-
-gsap.registerPlugin(ScrollTrigger);
+import { marcellus, outfit } from "@/lib/fonts";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const features = [
   {
-    number: "01",
+    icon: "✓",
     title: "CE-Gecertificeerd",
-    description: "Premium laser apparatuur die voldoet aan de hoogste Europese veiligheidsnormen.",
-    image: "/hero/14.jpg",
+    description: "Wij maken gebruik van de nieuwste technologieën en al onze apparatuur voldoet aan Europese veiligheidsnormen.",
   },
   {
-    number: "02",
+    icon: "♡",
     title: "Persoonlijke Aanpak",
     description: "Elk behandelplan op maat gemaakt voor jouw unieke huid en wensen.",
-    image: "/hero/11.jpg",
   },
   {
-    number: "03",
+    icon: "★",
     title: "Ervaren Specialisten",
-    description: "Meer dan 10 jaar ervaring in geavanceerde huid- en laserbehandelingen.",
-    image: "/hero/3.jpg",
+    description: "Onze ervaren huidtherapeuten hebben meer dan 6 jaar expertise in geavanceerde huid- en laserbehandelingen.",
   },
   {
-    number: "04",
+    icon: "€",
     title: "Transparante Prijzen",
-    description: "Geen verborgen kosten. Duidelijke prijzen en gratis consultatie.",
-    image: "/hero/1.jpg",
+    description: "Wij informeren u volledig over de behandeling, de prijs, de verwachte resultaten, mogelijke risico's en wat u realistisch kunt verwachten.",
   },
 ];
 
@@ -77,65 +68,38 @@ export function UspSection() {
 
   return (
     <section ref={sectionRef} className="bg-white">
-      <Container className="py-20 sm:py-28">
+      <Container className="py-16 sm:py-24">
         {/* Section Header */}
-        <div ref={titleRef} className="mx-auto max-w-2xl text-center mb-16">
-          <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
-            Waarom Aboré
-          </p>
-          <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-5xl tracking-wide text-foreground`}>
-            <SplitText>Jouw huid verdient de beste zorg</SplitText>
+        <div ref={titleRef} className="max-w-3xl mb-12">
+          <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight tracking-wide text-foreground mb-4`}>
+            Waarom <span className="text-primary">Aboré</span>?
           </h2>
+          <p className={`${outfit.className} text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl`}>
+            Jouw huid verdient de beste zorg
+          </p>
         </div>
 
         {/* Features Grid */}
-        <div ref={cardsRef} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div ref={cardsRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="usp-item group"
+              className="usp-item group rounded-xl bg-zinc-50 p-6 transition-all hover:bg-zinc-100"
             >
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl mb-5">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className={`${marcellus.className} absolute bottom-4 left-4 text-4xl font-light text-white/80`}>
-                  {feature.number}
-                </div>
+              {/* Icon */}
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                <span className="text-lg">{feature.icon}</span>
               </div>
 
               {/* Content */}
-              <h3 className={`${marcellus.className} text-xl text-foreground mb-2`}>
+              <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>
                 {feature.title}
               </h3>
-              <p className={`${syne.className} text-sm leading-relaxed text-zinc-600`}>
+              <p className={`${outfit.className} text-sm leading-relaxed text-zinc-600`}>
                 {feature.description}
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Bottom Stats */}
-        <div className="mt-20 pt-12 border-t border-zinc-200">
-          <div className="grid gap-8 sm:grid-cols-3 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground mb-2`}>10+</div>
-              <div className={`${syne.className} text-sm text-zinc-500`}>Jaar ervaring</div>
-            </div>
-            <div className="text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground mb-2`}>5000+</div>
-              <div className={`${syne.className} text-sm text-zinc-500`}>Tevreden cliënten</div>
-            </div>
-            <div className="text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground mb-2`}>4.9</div>
-              <div className={`${syne.className} text-sm text-zinc-500`}>Gemiddelde beoordeling</div>
-            </div>
-          </div>
         </div>
       </Container>
     </section>

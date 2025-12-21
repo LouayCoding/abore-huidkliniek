@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { gsap } from "gsap";
@@ -141,13 +141,13 @@ export default function ContactPage() {
         
         <Container className="relative z-10 text-center py-20">
           <div className="hero-content">
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+            <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
               Contact
             </p>
             <h1 className={`${marcellus.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6`}>
               Neem contact op
             </h1>
-            <p className={`${syne.className} text-lg text-white/80 max-w-xl mx-auto`}>
+            <p className={`${outfit.className} text-lg text-white/80 max-w-xl mx-auto`}>
               We staan klaar om al je vragen te beantwoorden
             </p>
           </div>
@@ -170,14 +170,14 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <a 
                       href="tel:+31634533358" 
-                      className={`${syne.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
+                      className={`${outfit.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
                     >
                       <span className="text-primary">Tel</span>
                       +31 6 34 53 33 58
                     </a>
                     <a 
                       href="mailto:info@huidkliniekabore.nl" 
-                      className={`${syne.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
+                      className={`${outfit.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
                     >
                       <span className="text-primary">Mail</span>
                       info@huidkliniekabore.nl
@@ -186,7 +186,7 @@ export default function ContactPage() {
                       href="https://wa.me/31634533358" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`${syne.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
+                      className={`${outfit.className} flex items-center gap-3 text-zinc-600 hover:text-primary transition-colors`}
                     >
                       <span className="text-primary">WhatsApp</span>
                       Stuur een bericht
@@ -199,7 +199,7 @@ export default function ContactPage() {
                   <h2 className={`${marcellus.className} text-2xl text-foreground mb-6`}>
                     Bezoek ons
                   </h2>
-                  <div className={`${syne.className} text-zinc-600 space-y-1`}>
+                  <div className={`${outfit.className} text-zinc-600 space-y-1`}>
                     <p>Waldhoornplein 14</p>
                     <p>2287 EA Rijswijk</p>
                   </div>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                   <h2 className={`${marcellus.className} text-2xl text-foreground mb-6`}>
                     Openingstijden
                   </h2>
-                  <div className={`${syne.className} text-zinc-600 space-y-2`}>
+                  <div className={`${outfit.className} text-zinc-600 space-y-2`}>
                     <div className="flex justify-between">
                       <span>Dinsdag - Zaterdag</span>
                       <span>10:00 - 18:00</span>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                 <div className="pt-6">
                   <a
                     href="https://abor.boekingapp.nl/"
-                    className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-white hover:bg-primary-hover hover:scale-105 transition-all duration-300`}
+                    className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-white hover:bg-primary-hover hover:scale-105 transition-all duration-300`}
                   >
                     Direct afspraak maken
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -242,7 +242,7 @@ export default function ContactPage() {
                   <h2 className={`${marcellus.className} text-2xl text-foreground mb-2`}>
                     Stuur een bericht
                   </h2>
-                  <p className={`${syne.className} text-zinc-600 mb-8`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-8`}>
                     We reageren binnen 24 uur
                   </p>
 
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       <h3 className={`${marcellus.className} text-2xl text-foreground mb-2`}>
                         Bericht verzonden
                       </h3>
-                      <p className={`${syne.className} text-zinc-600`}>
+                      <p className={`${outfit.className} text-zinc-600`}>
                         We nemen zo snel mogelijk contact met je op.
                       </p>
                     </div>
@@ -264,7 +264,7 @@ export default function ContactPage() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       {/* Name */}
                       <div>
-                        <label htmlFor="naam" className={`${syne.className} block text-sm text-foreground mb-2`}>
+                        <label htmlFor="naam" className={`${outfit.className} block text-sm text-foreground mb-2`}>
                           Naam
                         </label>
                         <input
@@ -273,7 +273,7 @@ export default function ContactPage() {
                           required
                           value={formData.naam}
                           onChange={(e) => setFormData({...formData, naam: e.target.value})}
-                          className={`${syne.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                          className={`${outfit.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
                           placeholder="Je naam"
                         />
                       </div>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                       {/* Email & Phone */}
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="email" className={`${syne.className} block text-sm text-foreground mb-2`}>
+                          <label htmlFor="email" className={`${outfit.className} block text-sm text-foreground mb-2`}>
                             E-mail
                           </label>
                           <input
@@ -290,12 +290,12 @@ export default function ContactPage() {
                             required
                             value={formData.email}
                             onChange={(e) => setFormData({...formData, email: e.target.value})}
-                            className={`${syne.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                            className={`${outfit.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
                             placeholder="je@email.nl"
                           />
                         </div>
                         <div>
-                          <label htmlFor="telefoon" className={`${syne.className} block text-sm text-foreground mb-2`}>
+                          <label htmlFor="telefoon" className={`${outfit.className} block text-sm text-foreground mb-2`}>
                             Telefoon
                           </label>
                           <input
@@ -303,7 +303,7 @@ export default function ContactPage() {
                             id="telefoon"
                             value={formData.telefoon}
                             onChange={(e) => setFormData({...formData, telefoon: e.target.value})}
-                            className={`${syne.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                            className={`${outfit.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20`}
                             placeholder="06 12345678"
                           />
                         </div>
@@ -311,14 +311,14 @@ export default function ContactPage() {
 
                       {/* Treatment */}
                       <div>
-                        <label htmlFor="behandeling" className={`${syne.className} block text-sm text-foreground mb-2`}>
+                        <label htmlFor="behandeling" className={`${outfit.className} block text-sm text-foreground mb-2`}>
                           Interesse in
                         </label>
                         <select
                           id="behandeling"
                           value={formData.behandeling}
                           onChange={(e) => setFormData({...formData, behandeling: e.target.value})}
-                          className={`${syne.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                          className={`${outfit.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20`}
                         >
                           <option value="">Selecteer een behandeling</option>
                           <option value="laserontharing">Laserontharing</option>
@@ -333,7 +333,7 @@ export default function ContactPage() {
 
                       {/* Message */}
                       <div>
-                        <label htmlFor="bericht" className={`${syne.className} block text-sm text-foreground mb-2`}>
+                        <label htmlFor="bericht" className={`${outfit.className} block text-sm text-foreground mb-2`}>
                           Bericht
                         </label>
                         <textarea
@@ -341,7 +341,7 @@ export default function ContactPage() {
                           rows={4}
                           value={formData.bericht}
                           onChange={(e) => setFormData({...formData, bericht: e.target.value})}
-                          className={`${syne.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none`}
+                          className={`${outfit.className} w-full bg-white border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none`}
                           placeholder="Waar kunnen we je mee helpen?"
                         />
                       </div>
@@ -350,12 +350,12 @@ export default function ContactPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className={`${syne.className} w-full rounded-lg bg-foreground px-8 py-4 text-white hover:bg-zinc-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed`}
+                        className={`${outfit.className} w-full rounded-lg bg-foreground px-8 py-4 text-white hover:bg-zinc-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed`}
                       >
                         {isSubmitting ? "Verzenden..." : "Verstuur bericht"}
                       </button>
 
-                      <p className={`${syne.className} text-xs text-zinc-500 text-center`}>
+                      <p className={`${outfit.className} text-xs text-zinc-500 text-center`}>
                         Of bel direct: <a href="tel:+31634533358" className="text-primary hover:underline">+31 6 34 53 33 58</a>
                       </p>
                     </form>
@@ -372,13 +372,13 @@ export default function ContactPage() {
       <section ref={mapRef} className="bg-[#faf6ea]">
         <Container className="py-16 sm:py-20">
           <div className="map-title text-center mb-10">
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+            <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
               Locatie
             </p>
             <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
               Bezoek onze kliniek
             </h2>
-            <p className={`${syne.className} text-zinc-600`}>
+            <p className={`${outfit.className} text-zinc-600`}>
               Waldhoornplein 14, 2287 EA Rijswijk
             </p>
           </div>
@@ -401,7 +401,7 @@ export default function ContactPage() {
               <h3 className={`${marcellus.className} text-xl text-foreground mb-2`}>
                 Aboré Huidkliniek
               </h3>
-              <p className={`${syne.className} text-sm text-zinc-600 mb-4`}>
+              <p className={`${outfit.className} text-sm text-zinc-600 mb-4`}>
                 Waldhoornplein 14<br />
                 2287 EA Rijswijk
               </p>
@@ -410,13 +410,13 @@ export default function ContactPage() {
                   href="https://maps.google.com/?q=Waldhoornplein+14+Rijswijk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm text-white hover:bg-primary-hover transition-all`}
+                  className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm text-white hover:bg-primary-hover transition-all`}
                 >
                   Route plannen
                 </a>
                 <a
                   href="tel:+31634533358"
-                  className={`${syne.className} inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-2.5 text-sm text-foreground hover:border-primary transition-all`}
+                  className={`${outfit.className} inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-2.5 text-sm text-foreground hover:border-primary transition-all`}
                 >
                   Bellen
                 </a>

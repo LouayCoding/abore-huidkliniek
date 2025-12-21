@@ -1,7 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { Container } from "@/components/ui";
-import { syne, marcellus } from "@/lib/fonts";
+import { outfit, marcellus } from "@/lib/fonts";
+import { siteConfig, mainNavigation } from "@/data/site-config";
+import { useBodyScrollLock, useEscapeKey } from "@/hooks/useFocusTrap";
+import { getFormattedPhone, getWhatsAppUrl } from "@/lib/env";
 
 interface HeaderProps {
   variant?: "transparent" | "light";
@@ -11,17 +14,11 @@ export function HeaderTransparent({ variant = "transparent" }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const isLight = variant === "light";
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [open]);
+  const closeMenu = useCallback(() => setOpen(false), []);
+
+  // Use hooks for accessibility
+  useBodyScrollLock(open);
+  useEscapeKey(open, closeMenu);
   return (
     <div className="absolute left-0 right-0 top-0 z-20">
       <Container className="py-6">
@@ -32,7 +29,7 @@ export function HeaderTransparent({ variant = "transparent" }: HeaderProps) {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className={`${syne.className} hidden items-center gap-8 lg:flex`}>
+          <nav className={`${outfit.className} hidden items-center gap-8 lg:flex`}>
             <a href="/over-ons" className={`${isLight ? 'text-zinc-600 hover:text-primary' : 'text-white/90 hover:text-white'} transition-colors text-sm`}>
               Over ons
             </a>
@@ -99,7 +96,7 @@ export function HeaderTransparent({ variant = "transparent" }: HeaderProps) {
           </button>
 
           {/* Navigation Links */}
-          <nav className={`${syne.className} relative z-10 flex flex-col gap-2`}>
+          <nav className={`${outfit.className} relative z-10 flex flex-col gap-2`}>
             <a 
               href="/over-ons" 
               onClick={() => setOpen(false)} 
@@ -176,7 +173,7 @@ export function HeaderTransparent({ variant = "transparent" }: HeaderProps) {
             </a>
 
             {/* Contact Info */}
-            <div className={`${syne.className} space-y-3`}>
+            <div className={`${outfit.className} space-y-3`}>
               <a href="tel:+31634533358" className="flex items-center justify-center gap-3 text-zinc-600 hover:text-primary transition-colors text-sm">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

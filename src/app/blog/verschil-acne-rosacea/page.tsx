@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 

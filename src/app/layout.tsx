@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { lexend, marcellus } from "@/lib/fonts";
+import { lexend, marcellus, outfit } from "@/lib/fonts";
 import "./globals.css";
 import { CookieBanner } from "@/components/site/cookie-banner";
 import { WhatsAppButton } from "@/components/site/whatsapp-button";
@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} ${marcellus.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} ${marcellus.variable} ${outfit.variable} antialiased`}
       >
         {children}
         <WhatsAppButton />

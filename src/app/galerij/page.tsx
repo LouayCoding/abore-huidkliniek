@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { gsap } from "gsap";
@@ -88,7 +88,7 @@ export default function GalerijPage() {
           <h1 className={`${marcellus.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6`}>
             Galerij
           </h1>
-          <p className={`${syne.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto`}>
+          <p className={`${outfit.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto`}>
             Een kijkje in onze luxe kliniek, moderne apparatuur en behandelresultaten
           </p>
         </Container>
@@ -101,7 +101,7 @@ export default function GalerijPage() {
         <Container className="relative py-20 sm:py-32">
           {/* Section Title */}
           <div ref={titleRef} className="mb-12 text-center">
-            <p className={`${syne.className} text-zinc-600`}>
+            <p className={`${outfit.className} text-zinc-600`}>
               {allImages.length} afbeeldingen
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function GalerijPage() {
                 <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="rounded-lg bg-white/95 backdrop-blur-sm px-3 py-2">
                     <p className={`${marcellus.className} text-sm font-medium text-foreground`}>{image.title}</p>
-                    <p className={`${syne.className} text-xs text-zinc-600 mt-0.5`}>{image.category}</p>
+                    <p className={`${outfit.className} text-xs text-zinc-600 mt-0.5`}>{image.category}</p>
                   </div>
                 </div>
 
@@ -142,12 +142,12 @@ export default function GalerijPage() {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <p className={`${syne.className} text-zinc-600 mb-4`}>
+            <p className={`${outfit.className} text-zinc-600 mb-4`}>
               Wil je onze kliniek persoonlijk ervaren?
             </p>
             <a 
               href="https://abor.boekingapp.nl/" 
-              className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
+              className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
             >
               Plan een rondleiding
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -213,7 +213,7 @@ export default function GalerijPage() {
             />
             <div className="mt-4 text-center">
               <p className={`${marcellus.className} text-xl text-white mb-1`}>{allImages[openIndex].title}</p>
-              <p className={`${syne.className} text-white/80`}>{allImages[openIndex].category}</p>
+              <p className={`${outfit.className} text-white/80`}>{allImages[openIndex].category}</p>
             </div>
           </div>
         </div>

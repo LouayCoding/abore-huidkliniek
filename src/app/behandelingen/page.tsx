@@ -3,13 +3,11 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Button } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { siteConfig } from "@/data/site-config";
 
 const behandelingen = [
   {
@@ -49,7 +47,15 @@ const behandelingen = [
     title: "Lichaamsbehandelingen",
     description: "Body contouring, cellulitis en huidverslapping behandelingen",
     image: "/hero/13.jpg",
-    treatments: ["LPG cellulitis", "Huidverslapping", "Striemen", "Tatoeage verwijdering"],
+    treatments: ["LPG cellulitis", "Huidverslapping", "Striemen"],
+    priceFrom: "€65",
+  },
+  {
+    slug: "tatoeage-verwijderen",
+    title: "Tatoeageverwijdering",
+    description: "Veilige en effectieve picolaser verwijdering van tatoeages",
+    image: "/hero/3.jpg",
+    treatments: ["Gratis consult", "0-10 cm²", "11-25 cm²", "26+ cm²"],
     priceFrom: "€50",
   },
   {
@@ -109,8 +115,8 @@ export default function BehandelingenPage() {
     <>
       <HeaderTransparent />
       
-      {/* Hero Section with Background Image */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Image */}
+      <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-end overflow-hidden">
         <Image 
           src="/hero/1.jpg" 
           alt="Behandelingen Aboré" 
@@ -118,36 +124,33 @@ export default function BehandelingenPage() {
           priority
           className="object-cover" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         
-        <Container className="relative z-10 text-center py-20">
-          <div ref={titleRef}>
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
-              Onze Expertise
-            </p>
-            <h1 className={`${marcellus.className} text-4xl sm:text-5xl lg:text-6xl text-white mb-6`}>
-              Behandelingen
+        <Container className="relative z-10 pb-12 sm:pb-16 pt-32">
+          <div ref={titleRef} className="max-w-3xl">
+            <h1 className={`${marcellus.className} text-4xl sm:text-5xl lg:text-[3.5rem] leading-tight tracking-wide text-white mb-4`}>
+              <span className="text-primary">Behandelingen</span> die jouw huid natuurlijk laten stralen
             </h1>
-            <p className={`${syne.className} text-lg text-white/80 max-w-2xl mx-auto`}>
+            <p className={`${outfit.className} text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl`}>
               Ontdek onze professionele huid- en laserbehandelingen met transparante prijzen
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Treatments Grid - Clean cards like homepage */}
+      {/* Treatments Grid */}
       <section className="bg-white">
         <Container className="py-16 sm:py-24">
-          <div ref={gridRef} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          <div ref={gridRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {behandelingen.map((behandeling) => (
               <Link
                 key={behandeling.slug}
                 href={`/behandelingen/${behandeling.slug}`}
                 className="treatment-card group"
               >
-                <div className="rounded-lg border border-zinc-200 bg-white overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg">
+                <div className="rounded-xl bg-zinc-50 overflow-hidden transition-all hover:bg-zinc-100">
                   {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={behandeling.image}
                       alt={behandeling.title}
@@ -157,46 +160,41 @@ export default function BehandelingenPage() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className={`${marcellus.className} text-2xl text-foreground`}>
+                  <div className="p-5">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className={`${marcellus.className} text-xl text-foreground`}>
                         {behandeling.title}
                       </h3>
-                      <span className={`${syne.className} text-sm font-semibold text-primary`}>
-                        Vanaf {behandeling.priceFrom}
+                      <span className={`${outfit.className} text-xs font-semibold text-primary shrink-0`}>
+                        v.a. {behandeling.priceFrom}
                       </span>
                     </div>
                     
-                    <p className={`${syne.className} text-zinc-600 mb-4`}>
+                    <p className={`${outfit.className} text-sm text-zinc-600 mb-4`}>
                       {behandeling.description}
                     </p>
 
                     {/* Treatments List */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
                       {behandeling.treatments.slice(0, 3).map((treatment) => (
                         <span
                           key={treatment}
-                          className={`${syne.className} text-xs px-3 py-1.5 rounded-full border border-zinc-200 text-zinc-600`}
+                          className={`${outfit.className} text-xs px-2.5 py-1 rounded-full bg-white text-zinc-600`}
                         >
                           {treatment}
                         </span>
                       ))}
                       {behandeling.treatments.length > 3 && (
-                        <span className={`${syne.className} text-xs px-3 py-1.5 rounded-full border border-zinc-200 text-zinc-600`}>
+                        <span className={`${outfit.className} text-xs px-2.5 py-1 rounded-full bg-white text-zinc-500`}>
                           +{behandeling.treatments.length - 3}
                         </span>
                       )}
                     </div>
 
                     {/* CTA */}
-                    <div className="flex items-center gap-2 text-primary">
-                      <span className={`${syne.className} text-sm font-medium`}>
-                        Bekijk behandelingen
-                      </span>
-                      <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
+                    <span className={`${outfit.className} text-sm font-medium text-primary`}>
+                      Bekijk behandelingen →
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -206,29 +204,28 @@ export default function BehandelingenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#faf6ea]">
+      <section className="bg-zinc-50">
         <Container className="py-16 sm:py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
-              Niet zeker welke behandeling bij jou past?
+          <div className="max-w-3xl">
+            <h2 className={`${marcellus.className} text-2xl sm:text-3xl text-foreground mb-3`}>
+              Niet zeker welke <span className="text-primary">behandeling</span> bij jou past?
             </h2>
-            <p className={`${syne.className} text-lg text-zinc-600 mb-8`}>
+            <p className={`${outfit.className} text-base text-zinc-600 mb-6`}>
               Plan een gratis consult en ontvang persoonlijk advies van onze huidspecialisten
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center gap-6">
               <Button
-                href="https://abor.boekingapp.nl/"
-                className={`${syne.className} rounded-full`}
+                href={siteConfig.bookingUrl}
+                className={`${outfit.className} h-11 rounded-full bg-primary px-6 text-sm font-medium text-white hover:bg-primary-hover transition-colors`}
               >
                 Plan gratis consult
               </Button>
-              <Button
+              <a
                 href="/contact"
-                variant="outline"
-                className={`${syne.className} rounded-full`}
+                className={`${outfit.className} text-sm font-medium text-zinc-600 hover:text-primary transition-colors`}
               >
-                Neem contact op
-              </Button>
+                Neem contact op →
+              </a>
             </div>
           </div>
         </Container>

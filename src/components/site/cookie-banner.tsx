@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { syne, marcellus } from "@/lib/fonts";
+import { outfit, marcellus } from "@/lib/fonts";
 
 export function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
@@ -79,7 +79,7 @@ export function CookieBanner() {
                     <h3 className={`${marcellus.className} text-xl text-foreground mb-2`}>
                       Wij gebruiken cookies
                     </h3>
-                    <p className={`${syne.className} text-sm text-zinc-600 mb-4`}>
+                    <p className={`${outfit.className} text-sm text-zinc-600 mb-4`}>
                       Wij gebruiken cookies om uw ervaring te verbeteren, websiteverkeer te analyseren en 
                       gepersonaliseerde content te tonen. Door op "Accepteer alles" te klikken, gaat u akkoord 
                       met ons gebruik van cookies. Lees meer in ons{" "}
@@ -90,19 +90,19 @@ export function CookieBanner() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <button
                         onClick={acceptAll}
-                        className={`${syne.className} rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-all`}
+                        className={`${outfit.className} rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-all`}
                       >
                         Accepteer alles
                       </button>
                       <button
                         onClick={acceptNecessary}
-                        className={`${syne.className} rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-all`}
+                        className={`${outfit.className} rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-all`}
                       >
                         Alleen noodzakelijk
                       </button>
                       <button
                         onClick={() => setShowSettings(true)}
-                        className={`${syne.className} text-sm text-zinc-500 hover:text-primary transition-colors underline`}
+                        className={`${outfit.className} text-sm text-zinc-500 hover:text-primary transition-colors underline`}
                       >
                         Instellingen aanpassen
                       </button>
@@ -131,8 +131,8 @@ export function CookieBanner() {
                   {/* Necessary Cookies */}
                   <div className="flex items-start justify-between p-4 rounded-xl bg-zinc-50">
                     <div className="flex-1 pr-4">
-                      <h4 className={`${syne.className} font-semibold text-foreground`}>Noodzakelijke cookies</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600 mt-1`}>
+                      <h4 className={`${outfit.className} font-semibold text-foreground`}>Noodzakelijke cookies</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600 mt-1`}>
                         Deze cookies zijn essentieel voor het functioneren van de website en kunnen niet worden uitgeschakeld.
                       </p>
                     </div>
@@ -152,8 +152,8 @@ export function CookieBanner() {
                   {/* Analytics Cookies */}
                   <div className="flex items-start justify-between p-4 rounded-xl border border-zinc-200">
                     <div className="flex-1 pr-4">
-                      <h4 className={`${syne.className} font-semibold text-foreground`}>Analytische cookies</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600 mt-1`}>
+                      <h4 className={`${outfit.className} font-semibold text-foreground`}>Analytische cookies</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600 mt-1`}>
                         Deze cookies helpen ons te begrijpen hoe bezoekers de website gebruiken, zodat we deze kunnen verbeteren.
                       </p>
                     </div>
@@ -170,8 +170,8 @@ export function CookieBanner() {
                   {/* Marketing Cookies */}
                   <div className="flex items-start justify-between p-4 rounded-xl border border-zinc-200">
                     <div className="flex-1 pr-4">
-                      <h4 className={`${syne.className} font-semibold text-foreground`}>Marketing cookies</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600 mt-1`}>
+                      <h4 className={`${outfit.className} font-semibold text-foreground`}>Marketing cookies</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600 mt-1`}>
                         Deze cookies worden gebruikt om advertenties relevanter te maken en om de effectiviteit van campagnes te meten.
                       </p>
                     </div>
@@ -190,13 +190,13 @@ export function CookieBanner() {
                 <div className="flex gap-3">
                   <button
                     onClick={savePreferences}
-                    className={`${syne.className} flex-1 rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-all`}
+                    className={`${outfit.className} flex-1 rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-all`}
                   >
                     Voorkeuren opslaan
                   </button>
                   <button
                     onClick={acceptAll}
-                    className={`${syne.className} rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-all`}
+                    className={`${outfit.className} rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-all`}
                   >
                     Accepteer alles
                   </button>

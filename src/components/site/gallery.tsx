@@ -2,21 +2,16 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { marcellus, outfit } from "@/lib/fonts";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 const images = [
-  { src: "/hero/1.jpg", category: "Kliniek", span: "col-span-2 row-span-2" },
-  { src: "/hero/2.jpg", category: "Behandeling", span: "" },
-  { src: "/hero/3.jpg", category: "Apparatuur", span: "" },
-  { src: "/hero/10.jpg", category: "Kliniek", span: "" },
-  { src: "/hero/11.jpg", category: "Behandeling", span: "col-span-2" },
-  { src: "/hero/12.jpg", category: "Resultaat", span: "" },
-  { src: "/hero/13.jpg", category: "Kliniek", span: "" },
-  { src: "/hero/14.jpg", category: "Apparatuur", span: "col-span-2" },
+  { src: "/hero/1.jpg", category: "Kliniek" },
+  { src: "/hero/2.jpg", category: "Behandeling" },
+  { src: "/hero/3.jpg", category: "Apparatuur" },
+  { src: "/hero/10.jpg", category: "Kliniek" },
+  { src: "/hero/11.jpg", category: "Behandeling" },
+  { src: "/hero/14.jpg", category: "Apparatuur" },
 ];
 
 export function GallerySection() {
@@ -61,65 +56,52 @@ export function GallerySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="gallery" className="relative overflow-hidden bg-[#faf6ea]">
-      {/* Decorative blur */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2" />
-      
-      <Container className="relative py-20 sm:py-32">
+    <section ref={sectionRef} id="gallery" className="bg-zinc-50">
+      <Container className="py-16 sm:py-24">
         {/* Section Header */}
-        <div ref={titleRef} className="mx-auto max-w-3xl text-center mb-16">
-          <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
-            Galerij
-          </p>
-          <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-5xl tracking-wide text-foreground leading-tight`}>
-            Ontdek onze luxe kliniek
+        <div ref={titleRef} className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight tracking-wide text-foreground mb-4`}>
+            Ontdek onze <span className="text-primary">kliniek</span>
           </h2>
-          <p className={`${syne.className} mt-6 text-lg text-zinc-600`}>
+          <p className={`${outfit.className} text-base sm:text-lg text-zinc-600 leading-relaxed`}>
             Een kijkje in onze moderne behandelruimtes en geavanceerde apparatuur
           </p>
         </div>
 
-        {/* Gallery Grid - Masonry Style */}
-        <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px] sm:auto-rows-[250px]">
+        {/* Gallery Grid - Clean & Simple */}
+        <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {images.map((image, i) => (
             <button
               key={image.src}
               onClick={() => setOpenIndex(i)}
-              className={`gallery-item group relative overflow-hidden rounded-2xl ${image.span}`}
+              className="gallery-item group relative aspect-[4/3] overflow-hidden rounded-xl"
             >
               <Image 
                 src={image.src} 
                 alt={image.category} 
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                className="object-cover transition-transform duration-500 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/20" />
               
-              {/* Category Label */}
-              <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="rounded-lg bg-white/95 backdrop-blur-sm px-3 py-2">
-                  <p className={`${syne.className} text-sm font-medium text-foreground`}>{image.category}</p>
-                </div>
-              </div>
-
-              {/* Zoom Icon */}
-              <div className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm opacity-0 transition-all duration-300 group-hover:opacity-100">
-                <svg className="h-5 w-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
-                </svg>
+              {/* Category Label - Always visible on mobile */}
+              <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3">
+                <span className={`${outfit.className} text-xs sm:text-sm font-medium text-white drop-shadow-md`}>
+                  {image.category}
+                </span>
               </div>
             </button>
           ))}
         </div>
 
-        {/* Bottom Text */}
-        <div className="mt-12 text-center">
-          <p className={`${syne.className} text-zinc-600`}>
-            Wil je onze kliniek persoonlijk ervaren?{" "}
-            <a href="https://abor.boekingapp.nl/" className="text-primary hover:text-primary-hover transition-colors font-medium">
-              Plan een rondleiding
-            </a>
-          </p>
+        {/* Bottom CTA */}
+        <div className="mt-10 text-center">
+          <a 
+            href="https://abor.boekingapp.nl/"
+            className={`${outfit.className} text-sm font-medium text-primary hover:text-primary-hover transition-colors`}
+          >
+            Wil je onze kliniek persoonlijk ervaren? Plan een bezoek →
+          </a>
         </div>
       </Container>
 
@@ -177,7 +159,7 @@ export function GallerySection() {
               className="h-auto w-full rounded-xl object-contain" 
             />
             <div className="mt-4 text-center">
-              <p className={`${syne.className} text-white/80`}>{images[openIndex].category}</p>
+              <p className={`${outfit.className} text-white/80`}>{images[openIndex].category}</p>
             </div>
           </div>
         </div>

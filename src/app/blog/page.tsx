@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 
@@ -79,7 +79,7 @@ export default function BlogPage() {
           <h1 className={`${marcellus.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-6`}>
             Kennisbank
           </h1>
-          <p className={`${syne.className} text-lg sm:text-xl text-zinc-600 max-w-2xl mx-auto`}>
+          <p className={`${outfit.className} text-lg sm:text-xl text-zinc-600 max-w-2xl mx-auto`}>
             Expert tips en informatie over huidbehandelingen van Aboré Huidkliniek
           </p>
         </Container>
@@ -103,13 +103,13 @@ export default function BlogPage() {
                     className="object-cover transition-transform group-hover:scale-105"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className={`${syne.className} inline-block rounded-full bg-white/90 backdrop-blur-sm px-4 py-1 text-xs font-medium text-foreground`}>
+                    <span className={`${outfit.className} inline-block rounded-full bg-white/90 backdrop-blur-sm px-4 py-1 text-xs font-medium text-foreground`}>
                       {post.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className={`${syne.className} flex items-center gap-4 text-xs text-zinc-500 mb-3`}>
+                  <div className={`${outfit.className} flex items-center gap-4 text-xs text-zinc-500 mb-3`}>
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>{post.readTime} leestijd</span>
@@ -117,10 +117,10 @@ export default function BlogPage() {
                   <h2 className={`${marcellus.className} text-2xl text-foreground mb-3 group-hover:text-primary transition-colors`}>
                     {post.title}
                   </h2>
-                  <p className={`${syne.className} text-zinc-600 mb-4`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-4`}>
                     {post.excerpt}
                   </p>
-                  <div className={`${syne.className} flex items-center gap-2 text-primary font-medium`}>
+                  <div className={`${outfit.className} flex items-center gap-2 text-primary font-medium`}>
                     Lees meer
                     <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -140,12 +140,12 @@ export default function BlogPage() {
             <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
               Vragen over je huid?
             </h2>
-            <p className={`${syne.className} text-lg text-zinc-600 mb-8`}>
+            <p className={`${outfit.className} text-lg text-zinc-600 mb-8`}>
               Plan een gratis consult bij Aboré Huidkliniek in Rijswijk
             </p>
             <a
               href="https://abor.boekingapp.nl/"
-              className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
+              className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
             >
               Boek gratis consult
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

@@ -1,20 +1,21 @@
 "use client";
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/site/hero";
 import { HeaderTransparent } from "@/components/site/header";
 import { OverOns } from "@/components/site/over";
 import { TreatmentsSection } from "@/components/site/treatments";
-import { UspSection } from "@/components/site/usp";
-import { CtaSection } from "@/components/site/cta";
-import { TestimonialsSection } from "@/components/site/testimonials";
-import { FaqSection } from "@/components/site/faq";
 import { Footer } from "@/components/site/footer";
-import { GallerySection } from "@/components/site/gallery";
-import { HighlightSection } from "@/components/site/highlight";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { fadeInUp } from "@/lib/animations";
 
-gsap.registerPlugin(ScrollTrigger);
+// Dynamic imports for below-the-fold components (code splitting)
+const UspSection = dynamic(() => import("@/components/site/usp").then(m => ({ default: m.UspSection })));
+const CtaSection = dynamic(() => import("@/components/site/cta").then(m => ({ default: m.CtaSection })));
+const TestimonialsSection = dynamic(() => import("@/components/site/testimonials").then(m => ({ default: m.TestimonialsSection })));
+const FaqSection = dynamic(() => import("@/components/site/faq").then(m => ({ default: m.FaqSection })));
+const GallerySection = dynamic(() => import("@/components/site/gallery").then(m => ({ default: m.GallerySection })));
+const HighlightSection = dynamic(() => import("@/components/site/highlight").then(m => ({ default: m.HighlightSection })));
 
 export default function Home() {
   const sectionsRef = useRef<HTMLElement>(null);

@@ -2,29 +2,12 @@
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { Container, Button } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { SplitText } from "@/components/animations/split-text";
+import { heroSlides, siteConfig } from "@/data/site-config";
+import { CAROUSEL_AUTO_PLAY_INTERVAL } from "@/lib/constants";
 
-const slides = [
-  {
-    image: "/hero/1.jpg",
-    title: "Aboré Laser- & Huidkliniek",
-    subtitle: "Luxe huidbehandelingen in het hart van Rijswijk",
-    cta: "Plan gratis consult"
-  },
-  {
-    image: "/hero/14.jpg",
-    title: "Premium Laser Apparatuur",
-    subtitle: "CE-gecertificeerde systemen voor veilige en effectieve behandelingen",
-    cta: "Ontdek onze behandelingen"
-  },
-  {
-    image: "/hero/11.jpg",
-    title: "Persoonlijke Zorg & Aandacht",
-    subtitle: "Elk behandelplan op maat gemaakt voor jouw unieke huid",
-    cta: "Bekijk resultaten"
-  },
-];
+const slides = heroSlides;
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,10 +32,26 @@ export function Hero() {
     
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // Change slide every 5 seconds
+    }, CAROUSEL_AUTO_PLAY_INTERVAL);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
+
+  // Keyboard navigation for accessibility
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+        setIsAutoPlaying(false);
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+        setIsAutoPlaying(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextSlide, prevSlide]);
 
   return (
     <section className="relative isolate min-h-screen overflow-hidden">
@@ -89,12 +88,12 @@ export function Hero() {
                   {slides[currentSlide].title}
                 </SplitText>
               </h1>
-              <p className={`${syne.className} text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto`}>
+              <p className={`${outfit.className} text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto`}>
                 {slides[currentSlide].subtitle}
               </p>
               <Button 
-                href="https://abor.boekingapp.nl/" 
-                className={`${syne.className} h-14 rounded-full bg-primary px-10 text-white hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:scale-105`}
+                href={siteConfig.bookingUrl} 
+                className={`${outfit.className} h-14 rounded-full bg-primary px-10 text-white hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:scale-105`}
               >
                 {slides[currentSlide].cta}
               </Button>

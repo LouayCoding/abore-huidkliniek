@@ -2,7 +2,7 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import { HeaderTransparent } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { gsap } from "gsap";
@@ -118,19 +118,19 @@ export default function OverOnsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
         
         <Container className="relative z-10 h-full flex flex-col justify-end pb-20">
-          <p className={`${syne.className} text-sm font-medium uppercase tracking-[0.3em] text-primary mb-4`}>
+          <p className={`${outfit.className} text-sm font-medium uppercase tracking-[0.3em] text-primary mb-4`}>
             Welkom bij
           </p>
           <h1 className={`${marcellus.className} text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6`}>
             Aboré
           </h1>
-          <p className={`${syne.className} text-xl text-white/80 max-w-lg`}>
+          <p className={`${outfit.className} text-xl text-white/80 max-w-lg`}>
             Luxe laser- en huidkliniek waar expertise en persoonlijke zorg samenkomen
           </p>
           
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-            <span className={`${syne.className} text-xs text-white/60 uppercase tracking-widest`}>Scroll</span>
+            <span className={`${outfit.className} text-xs text-white/60 uppercase tracking-widest`}>Scroll</span>
             <div className="w-px h-12 bg-gradient-to-b from-white/60 to-transparent" />
           </div>
         </Container>
@@ -156,13 +156,13 @@ export default function OverOnsPage() {
           <Container className="mb-24">
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
               <div className="lg:col-span-5 animate-in">
-                <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+                <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
                   Onze missie
                 </p>
                 <h2 className={`${marcellus.className} text-4xl sm:text-5xl text-foreground mb-6`}>
                   Schoonheid door expertise
                 </h2>
-                <p className={`${syne.className} text-lg text-zinc-600 leading-relaxed`}>
+                <p className={`${outfit.className} text-lg text-zinc-600 leading-relaxed`}>
                   Bij Aboré draait alles om resultaat. We werken uitsluitend met CE-gecertificeerde 
                   premium apparatuur en medisch goedgekeurde producten. Elk behandelplan wordt 
                   zorgvuldig samengesteld op basis van jouw unieke huid en wensen.
@@ -195,13 +195,13 @@ export default function OverOnsPage() {
                 </div>
               </div>
               <div className="lg:col-span-5 lg:order-2 animate-in">
-                <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+                <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
                   Onze aanpak
                 </p>
                 <h2 className={`${marcellus.className} text-4xl sm:text-5xl text-foreground mb-6`}>
                   Persoonlijk & transparant
                 </h2>
-                <p className={`${syne.className} text-lg text-zinc-600 leading-relaxed`}>
+                <p className={`${outfit.className} text-lg text-zinc-600 leading-relaxed`}>
                   Geen verborgen kosten, geen onrealistische beloftes. We nemen de tijd voor 
                   een uitgebreide huidanalyse en geven eerlijk advies. Jouw vertrouwen is 
                   de basis van alles wat we doen.
@@ -226,7 +226,7 @@ export default function OverOnsPage() {
                 <div className={`${marcellus.className} text-5xl sm:text-6xl text-primary mb-2`}>
                   {stat.number}
                 </div>
-                <p className={`${syne.className} text-sm text-white/60`}>{stat.label}</p>
+                <p className={`${outfit.className} text-sm text-white/60`}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -237,7 +237,7 @@ export default function OverOnsPage() {
       <section className="bg-white overflow-hidden">
         <Container className="py-24 sm:py-32">
           <div className="text-center mb-16">
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+            <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
               Waar we voor staan
             </p>
             <h2 className={`${marcellus.className} text-4xl sm:text-5xl text-foreground`}>
@@ -264,7 +264,7 @@ export default function OverOnsPage() {
                 <h3 className={`${marcellus.className} text-3xl text-white mb-3`}>
                   Kwaliteit
                 </h3>
-                <p className={`${syne.className} text-white/80 leading-relaxed`}>
+                <p className={`${outfit.className} text-white/80 leading-relaxed`}>
                   We werken uitsluitend met CE-gecertificeerde premium apparatuur en medisch goedgekeurde producten voor optimale resultaten.
                 </p>
               </div>
@@ -281,7 +281,7 @@ export default function OverOnsPage() {
                 <h3 className={`${marcellus.className} text-2xl text-foreground mb-2 group-hover:text-white transition-colors duration-500`}>
                   Expertise
                 </h3>
-                <p className={`${syne.className} text-sm text-zinc-600 group-hover:text-white/70 transition-colors duration-500`}>
+                <p className={`${outfit.className} text-sm text-zinc-600 group-hover:text-white/70 transition-colors duration-500`}>
                   10+ jaar ervaring en voortdurende bijscholing
                 </p>
               </div>
@@ -298,7 +298,7 @@ export default function OverOnsPage() {
                 <h3 className={`${marcellus.className} text-2xl mb-2`}>
                   Persoonlijk
                 </h3>
-                <p className={`${syne.className} text-sm text-white/80`}>
+                <p className={`${outfit.className} text-sm text-white/80`}>
                   Elk behandelplan op maat voor jouw unieke huid
                 </p>
               </div>
@@ -316,7 +316,7 @@ export default function OverOnsPage() {
                 <h3 className={`${marcellus.className} text-2xl mb-2`}>
                   Transparant
                 </h3>
-                <p className={`${syne.className} text-white/70`}>
+                <p className={`${outfit.className} text-white/70`}>
                   Duidelijke prijzen, realistische verwachtingen en eerlijk advies. Geen verborgen kosten of onrealistische beloftes.
                 </p>
               </div>
@@ -329,7 +329,7 @@ export default function OverOnsPage() {
       <section className="bg-[#faf6ea]">
         <Container className="py-24 sm:py-32">
           <div className="text-center mb-16">
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+            <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
               Onze kliniek
             </p>
             <h2 className={`${marcellus.className} text-4xl sm:text-5xl text-foreground`}>
@@ -375,19 +375,19 @@ export default function OverOnsPage() {
         
         <Container className="relative z-10 py-32 sm:py-40">
           <div className="max-w-2xl">
-            <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
+            <p className={`${outfit.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
               Begin je reis
             </p>
             <h2 className={`${marcellus.className} text-4xl sm:text-5xl md:text-6xl text-white mb-6`}>
               Klaar voor jouw huidtransformatie?
             </h2>
-            <p className={`${syne.className} text-lg text-white/70 mb-10`}>
+            <p className={`${outfit.className} text-lg text-white/70 mb-10`}>
               Plan een gratis consult en ontdek wat we voor jouw huid kunnen betekenen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://abor.boekingapp.nl/"
-                className={`${syne.className} inline-flex items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all`}
+                className={`${outfit.className} inline-flex items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all`}
               >
                 Plan gratis consult
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -396,7 +396,7 @@ export default function OverOnsPage() {
               </a>
               <a
                 href="/contact"
-                className={`${syne.className} inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-10 py-4 text-white hover:bg-white/10 transition-all`}
+                className={`${outfit.className} inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-10 py-4 text-white hover:bg-white/10 transition-all`}
               >
                 Neem contact op
               </a>

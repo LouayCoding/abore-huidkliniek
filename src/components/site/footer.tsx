@@ -1,7 +1,9 @@
 "use client";
 import { Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
+import { marcellus, outfit } from "@/lib/fonts";
 import Link from "next/link";
+import { siteConfig, footerNavigation } from "@/data/site-config";
+import { getFormattedPhone, getWhatsAppUrl, getFullAddress } from "@/lib/env";
 
 export function Footer() {
   return (
@@ -14,14 +16,14 @@ export function Footer() {
             <Link href="/" className={`${marcellus.className} text-3xl text-white`}>
               Aboré
             </Link>
-            <p className={`${syne.className} text-sm text-zinc-300 mt-4 leading-relaxed`}>
+            <p className={`${outfit.className} text-sm text-zinc-300 mt-4 leading-relaxed`}>
               Luxe laser- en huidkliniek in Rijswijk. Persoonlijke zorg met premium CE-gecertificeerde apparatuur.
             </p>
             
             {/* Social */}
             <div className="flex gap-3 mt-6">
               <a 
-                href="https://instagram.com/huidkliniekabore" 
+                href={siteConfig.social.instagram} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-primary transition-colors"
@@ -32,7 +34,7 @@ export function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://wa.me/31634533358" 
+                href={getWhatsAppUrl()} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-primary transition-colors"
@@ -47,10 +49,10 @@ export function Footer() {
 
           {/* Links */}
           <div className="lg:col-span-2">
-            <h4 className={`${syne.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
+            <h4 className={`${outfit.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
               Pagina's
             </h4>
-            <nav className={`${syne.className} flex flex-col gap-2.5 text-sm`}>
+            <nav className={`${outfit.className} flex flex-col gap-2.5 text-sm`}>
               <Link href="/" className="text-zinc-300 hover:text-primary transition-colors">Home</Link>
               <Link href="/over-ons" className="text-zinc-300 hover:text-primary transition-colors">Over ons</Link>
               <Link href="/behandelingen" className="text-zinc-300 hover:text-primary transition-colors">Behandelingen</Link>
@@ -61,10 +63,10 @@ export function Footer() {
 
           {/* Behandelingen */}
           <div className="lg:col-span-3">
-            <h4 className={`${syne.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
+            <h4 className={`${outfit.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
               Behandelingen
             </h4>
-            <nav className={`${syne.className} flex flex-col gap-2.5 text-sm`}>
+            <nav className={`${outfit.className} flex flex-col gap-2.5 text-sm`}>
               <Link href="/behandelingen/laserontharing" className="text-zinc-300 hover:text-primary transition-colors">Laserontharing</Link>
               <Link href="/behandelingen/acne-rosacea" className="text-zinc-300 hover:text-primary transition-colors">Acne & Rosacea</Link>
               <Link href="/behandelingen/pigmentbehandeling" className="text-zinc-300 hover:text-primary transition-colors">Pigmentbehandeling</Link>
@@ -75,10 +77,10 @@ export function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-3">
-            <h4 className={`${syne.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
+            <h4 className={`${outfit.className} text-sm font-medium uppercase tracking-wider text-primary mb-4`}>
               Contact
             </h4>
-            <div className={`${syne.className} text-sm text-zinc-300 space-y-2.5`}>
+            <div className={`${outfit.className} text-sm text-zinc-300 space-y-2.5`}>
               <p>Waldhoornplein 14</p>
               <p>2287 EA Rijswijk</p>
               <a href="tel:+31634533358" className="block hover:text-primary transition-colors">
@@ -97,10 +99,10 @@ export function Footer() {
       <div className="bg-zinc-900">
         <Container className="py-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className={`${syne.className} text-xs text-zinc-400`}>
+            <p className={`${outfit.className} text-xs text-zinc-400`}>
               © {new Date().getFullYear()} Aboré Huidkliniek
             </p>
-            <nav className={`${syne.className} flex flex-wrap gap-6 text-xs text-zinc-400`}>
+            <nav className={`${outfit.className} flex flex-wrap gap-6 text-xs text-zinc-400`}>
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>
               <Link href="/algemene-voorwaarden" className="hover:text-white transition-colors">Voorwaarden</Link>
               <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>

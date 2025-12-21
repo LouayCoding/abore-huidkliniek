@@ -2,13 +2,10 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Button, Container } from "@/components/ui";
-import { marcellus, syne } from "@/lib/fonts";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AnimatedTitle } from "@/components/animations/animated-title";
-import { SplitText } from "@/components/animations/split-text";
-
-gsap.registerPlugin(ScrollTrigger);
+import { marcellus, outfit } from "@/lib/fonts";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { fadeInUp, scaleIn, staggerChildren, revealMask, createScrollTimeline } from "@/lib/animations";
+import { stats, siteConfig } from "@/data/site-config";
 
 export function OverOns() {
   const imgRef = useRef<HTMLDivElement>(null);
@@ -59,59 +56,46 @@ export function OverOns() {
   return (
     <section id="over" className="bg-white">
       <Container className="py-20 sm:py-28">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className={`${syne.className} text-sm font-medium uppercase tracking-widest text-primary mb-4`}>
-            Over Aboré
-          </p>
-          <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-5xl tracking-wide text-foreground max-w-3xl mx-auto`}>
-            <SplitText>Luxe laserzorg met precisie en persoonlijke aandacht</SplitText>
-          </h2>
-        </div>
-
-        {/* Single Image */}
-        <div ref={imgRef} className="max-w-4xl mx-auto mb-16">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
-            <Image src="/hero/11.jpg" alt="Onze kliniek" fill className="object-cover" />
-            <span ref={maskRef} className="absolute inset-0 bg-white origin-left" />
-          </div>
-        </div>
-
-        {/* Content */}
-        <div ref={textRef} className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <p className={`${syne.className} text-lg text-zinc-700 leading-relaxed`}>
-              Wij bieden luxe, minimalistische zorg met hoogwaardige apparatuur en persoonlijke aandacht. Elke behandeling wordt op maat afgestemd op jouw unieke huid.
+        {/* Two Column Layout: Text Left, Image Right */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+          {/* Left: Text Content */}
+          <div ref={textRef} className="lg:pr-8">
+            <h2 className={`${marcellus.className} text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight tracking-wide text-foreground mb-6`}>
+              Bij <span className="text-primary">Aboré</span> draait het om jou! Jouw huid, jouw moment, jouw zorg.
+            </h2>
+            <p className={`${outfit.className} text-base sm:text-lg text-zinc-600 leading-relaxed mb-10`}>
+              Bij Aboré werken uitsluitend gediplomeerde huidtherapeuten, zodat je altijd verzekerd bent van deskundige zorg. We nemen de tijd voor jou, werken met hoogwaardige medische apparatuur, en passen alleen behandelingen toe die wetenschappelijk onderbouwd zijn. We blijven ons voortdurend ontwikkelen in de nieuwste technologieën, zodat jij altijd profiteert van de meest effectieve huidzorg. Zo krijg jij precies de zorg die bij jouw huid past.
             </p>
-            <p className={`${syne.className} text-lg text-zinc-700 leading-relaxed`}>
-              Onze specialisten combineren jarenlange ervaring met precisie voor zichtbare en veilige resultaten die je zelfvertrouwen versterken.
-            </p>
-          </div>
 
-          {/* Stats */}
-          <div ref={statsRef} className="grid grid-cols-3 gap-8 py-10 border-y border-zinc-200">
-            <div className="stat-item text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground`}>10+</div>
-              <div className={`${syne.className} text-sm text-zinc-500 mt-2`}>Jaar ervaring</div>
-            </div>
-            <div className="stat-item text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground`}>5000+</div>
-              <div className={`${syne.className} text-sm text-zinc-500 mt-2`}>Tevreden cliënten</div>
-            </div>
-            <div className="stat-item text-center">
-              <div className={`${marcellus.className} text-4xl sm:text-5xl text-foreground`}>4.9</div>
-              <div className={`${syne.className} text-sm text-zinc-500 mt-2`}>Beoordeling</div>
+            {/* CTA - Clear hierarchy */}
+            <div className="flex items-center gap-6">
+              <Button href={siteConfig.bookingUrl} className={`${outfit.className} h-12 rounded-full bg-primary px-8 text-sm font-medium text-white hover:bg-primary-hover transition-colors`}>
+                Plan gratis consult
+              </Button>
+              <a href="/behandelingen" className={`${outfit.className} text-sm font-medium text-zinc-600 hover:text-primary transition-colors`}>
+                Bekijk behandelingen →
+              </a>
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Button href="https://abor.boekingapp.nl/" className={`${syne.className} h-14 rounded-full bg-primary px-10 text-white hover:bg-primary-hover`}>
-              Plan gratis consult
-            </Button>
-            <Button href="/behandelingen" variant="outline" className={`${syne.className} h-14 rounded-full px-10 border-2`}>
-              Bekijk behandelingen
-            </Button>
+          {/* Right: Image with Stats Overlay */}
+          <div ref={imgRef} className="order-last">
+            <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl">
+              <Image src="/hero/11.jpg" alt="Onze kliniek" fill className="object-cover" />
+              <span ref={maskRef} className="absolute inset-0 bg-white origin-left" />
+              
+              {/* Stats Overlay */}
+              <div ref={statsRef} className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 pt-16">
+                <div className="grid grid-cols-3 gap-4">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="stat-item text-center">
+                      <div className={`${outfit.className} text-2xl sm:text-3xl font-semibold text-white`}>{stat.value}</div>
+                      <div className={`${outfit.className} text-[10px] text-white/70 mt-1 uppercase tracking-wide`}>{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

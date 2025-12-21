@@ -1,4 +1,4 @@
-import { Lexend, Marcellus, Syne } from "next/font/google";
+import { Lexend, Marcellus, Outfit } from "next/font/google";
 
 export const lexend = Lexend({
   variable: "--font-lexend",
@@ -11,8 +11,8 @@ export const marcellus = Marcellus({
   weight: "400",
 });
 
-export const syne = Syne({
-  variable: "--font-syne",
+export const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400","600"],
+  weight: ["400","500","600","700"],
 });
