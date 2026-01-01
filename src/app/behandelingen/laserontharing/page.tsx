@@ -94,18 +94,18 @@ export default function LaseronthatingPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
         
         <Container className="relative z-10 text-center">
-          <div className={`${syne.className} mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white`}>
+          <div className={`${outfit.className} mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white`}>
             💎 Populairste behandeling
           </div>
           <h1 className={`${marcellus.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6`}>
             Laserontharing
           </h1>
-          <p className={`${syne.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8`}>
+          <p className={`${outfit.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8`}>
             Permanente ontharing voor gezicht en lichaam met CE-gecertificeerde premium laser
           </p>
           <a
             href="https://abor.boekingapp.nl/"
-            className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
+            className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
           >
             Boek nu vanaf €30
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -125,10 +125,10 @@ export default function LaseronthatingPage() {
                 <h2 className={`${marcellus.className} text-4xl text-foreground mb-4`}>
                   Waarom laserontharing?
                 </h2>
-                <p className={`${syne.className} text-lg text-zinc-700 leading-relaxed mb-4`}>
+                <p className={`${outfit.className} text-lg text-zinc-700 leading-relaxed mb-4`}>
                   Laserontharing is de meest effectieve methode voor langdurige haarverwijdering. Onze premium laser technologie is geschikt voor alle huidtypes en lichaamszones.
                 </p>
-                <p className={`${syne.className} text-lg text-zinc-700 leading-relaxed`}>
+                <p className={`${outfit.className} text-lg text-zinc-700 leading-relaxed`}>
                   De behandeling is veilig, comfortabel en levert zichtbare resultaten al na enkele sessies.
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function LaseronthatingPage() {
                       <svg className="h-6 w-6 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className={`${syne.className} text-zinc-700`}>{benefit}</span>
+                      <span className={`${outfit.className} text-zinc-700`}>{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -166,8 +166,8 @@ export default function LaseronthatingPage() {
                       1
                     </div>
                     <div>
-                      <h4 className={`${syne.className} font-semibold text-foreground mb-1`}>Gratis consult</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600`}>We analyseren je huid en maken een behandelplan</p>
+                      <h4 className={`${outfit.className} font-semibold text-foreground mb-1`}>Gratis consult</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600`}>We analyseren je huid en maken een behandelplan</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -175,8 +175,8 @@ export default function LaseronthatingPage() {
                       2
                     </div>
                     <div>
-                      <h4 className={`${syne.className} font-semibold text-foreground mb-1`}>Behandeling</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600`}>De laser vernietigt de haarwortel zonder de huid te beschadigen</p>
+                      <h4 className={`${outfit.className} font-semibold text-foreground mb-1`}>Behandeling</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600`}>De laser vernietigt de haarwortel zonder de huid te beschadigen</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -184,8 +184,8 @@ export default function LaseronthatingPage() {
                       3
                     </div>
                     <div>
-                      <h4 className={`${syne.className} font-semibold text-foreground mb-1`}>Resultaat</h4>
-                      <p className={`${syne.className} text-sm text-zinc-600`}>Na 6-8 sessies geniet je van langdurig gladde huid</p>
+                      <h4 className={`${outfit.className} font-semibold text-foreground mb-1`}>Resultaat</h4>
+                      <p className={`${outfit.className} text-sm text-zinc-600`}>Na 6-8 sessies geniet je van langdurig gladde huid</p>
                     </div>
                   </div>
                 </div>
@@ -206,10 +206,10 @@ export default function LaseronthatingPage() {
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex-1">
-                          <h4 className={`${syne.className} font-semibold text-foreground mb-1`}>
+                          <h4 className={`${outfit.className} font-semibold text-foreground mb-1`}>
                             {treatment.name}
                           </h4>
-                          <p className={`${syne.className} text-sm text-zinc-600`}>
+                          <p className={`${outfit.className} text-sm text-zinc-600`}>
                             {treatment.duration}
                           </p>
                         </div>
@@ -228,12 +228,12 @@ export default function LaseronthatingPage() {
                 <h4 className={`${marcellus.className} text-xl text-foreground mb-2`}>
                   Speciale actie!
                 </h4>
-                <p className={`${syne.className} text-zinc-700 mb-4`}>
+                <p className={`${outfit.className} text-zinc-700 mb-4`}>
                   Oksels, Onderarmen en Onderbenen samen voor <span className="font-bold text-primary">€150</span> (normaal €240)
                 </p>
                 <a
                   href="https://abor.boekingapp.nl/"
-                  className={`${syne.className} inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors font-medium`}
+                  className={`${outfit.className} inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors font-medium`}
                 >
                   Profiteer nu
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -259,7 +259,7 @@ export default function LaseronthatingPage() {
                   <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>
                     {faq.q}
                   </h3>
-                  <p className={`${syne.className} text-zinc-600`}>
+                  <p className={`${outfit.className} text-zinc-600`}>
                     {faq.a}
                   </p>
                 </div>
@@ -276,19 +276,19 @@ export default function LaseronthatingPage() {
             <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
               Klaar voor gladde huid?
             </h2>
-            <p className={`${syne.className} text-lg text-zinc-600 mb-8`}>
+            <p className={`${outfit.className} text-lg text-zinc-600 mb-8`}>
               Plan je gratis consult en ontdek wat laserontharing voor jou kan betekenen
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="https://abor.boekingapp.nl/"
-                className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
+                className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
               >
                 Boek behandeling
               </a>
               <a
                 href="/contact"
-                className={`${syne.className} inline-flex items-center gap-2 rounded-full border-2 border-primary px-10 py-4 text-primary hover:bg-primary hover:text-white transition-all`}
+                className={`${outfit.className} inline-flex items-center gap-2 rounded-full border-2 border-primary px-10 py-4 text-primary hover:bg-primary hover:text-white transition-all`}
               >
                 Stel een vraag
               </a>

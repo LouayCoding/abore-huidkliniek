@@ -25,19 +25,24 @@ export function fadeInUp(
   
   const scrollTriggerConfig = scrollTrigger === true 
     ? { trigger: element, ...scrollTriggerDefaults }
-    : scrollTrigger;
+    : scrollTrigger || undefined;
+  
+  const animationProps: gsap.TweenVars = { 
+    y: 0, 
+    opacity: 1, 
+    duration, 
+    delay,
+    ease,
+  };
+
+  if (scrollTriggerConfig) {
+    animationProps.scrollTrigger = scrollTriggerConfig;
+  }
   
   return gsap.fromTo(
     element,
     { y: 20, opacity: 0 },
-    { 
-      y: 0, 
-      opacity: 1, 
-      duration, 
-      delay,
-      ease,
-      scrollTrigger: scrollTriggerConfig,
-    }
+    animationProps
   );
 }
 
@@ -54,18 +59,23 @@ export function fadeIn(
   
   const scrollTriggerConfig = scrollTrigger === true 
     ? { trigger: element, ...scrollTriggerDefaults }
-    : scrollTrigger;
+    : scrollTrigger || undefined;
+  
+  const animationProps: gsap.TweenVars = { 
+    opacity: 1, 
+    duration, 
+    delay,
+    ease,
+  };
+
+  if (scrollTriggerConfig) {
+    animationProps.scrollTrigger = scrollTriggerConfig;
+  }
   
   return gsap.fromTo(
     element,
     { opacity: 0 },
-    { 
-      opacity: 1, 
-      duration, 
-      delay,
-      ease,
-      scrollTrigger: scrollTriggerConfig,
-    }
+    animationProps
   );
 }
 
@@ -82,18 +92,23 @@ export function scaleIn(
   
   const scrollTriggerConfig = scrollTrigger === true 
     ? { trigger: element, ...scrollTriggerDefaults }
-    : scrollTrigger;
+    : scrollTrigger || undefined;
+  
+  const animationProps: gsap.TweenVars = { 
+    scale: 1, 
+    duration, 
+    delay,
+    ease,
+  };
+
+  if (scrollTriggerConfig) {
+    animationProps.scrollTrigger = scrollTriggerConfig;
+  }
   
   return gsap.fromTo(
     element,
     { scale: 1.05 },
-    { 
-      scale: 1, 
-      duration, 
-      delay,
-      ease,
-      scrollTrigger: scrollTriggerConfig,
-    }
+    animationProps
   );
 }
 
@@ -120,20 +135,25 @@ export function staggerChildren(
   
   const scrollTriggerConfig = scrollTrigger === true 
     ? { trigger: container, ...scrollTriggerDefaults }
-    : scrollTrigger;
+    : scrollTrigger || undefined;
+  
+  const animationProps: gsap.TweenVars = { 
+    y: 0, 
+    opacity: 1, 
+    duration,
+    delay,
+    ease,
+    stagger,
+  };
+
+  if (scrollTriggerConfig) {
+    animationProps.scrollTrigger = scrollTriggerConfig;
+  }
   
   return gsap.fromTo(
     children,
     { y: 24, opacity: 0 },
-    { 
-      y: 0, 
-      opacity: 1, 
-      duration,
-      delay,
-      ease,
-      stagger,
-      scrollTrigger: scrollTriggerConfig,
-    }
+    animationProps
   );
 }
 

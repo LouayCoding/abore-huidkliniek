@@ -51,10 +51,10 @@ export default function PigmentvlekkenVerwijderenPage() {
           <h1 className={`${marcellus.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6`}>
             Pigmentvlekken Verwijderen Rijswijk
           </h1>
-          <p className={`${syne.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8`}>
+          <p className={`${outfit.className} text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8`}>
             Effectieve verwijdering van ouderdomsvlekken, melasma en pigment met picolaser technologie
           </p>
-          <a href="https://abor.boekingapp.nl/" className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg`}>
+          <a href="https://abor.boekingapp.nl/" className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg`}>
             Boek vanaf €90
           </a>
         </Container>
@@ -68,7 +68,7 @@ export default function PigmentvlekkenVerwijderenPage() {
               Pigmentvlekken verwijderen met picolaser in Rijswijk
             </h2>
             
-            <div className={`${syne.className} prose prose-lg max-w-none text-zinc-700 space-y-6`}>
+            <div className={`${outfit.className} prose prose-lg max-w-none text-zinc-700 space-y-6`}>
               <p>
                 Pigmentvlekken, ook wel ouderdomsvlekken of lentigo solaris genoemd, zijn een veelvoorkomend huidprobleem. Bij Aboré Huidkliniek in Rijswijk verwijderen we pigmentvlekken effectief en veilig met geavanceerde picolaser technologie.
               </p>
@@ -84,32 +84,32 @@ export default function PigmentvlekkenVerwijderenPage() {
               <div className="grid gap-6 sm:grid-cols-2 not-prose">
                 <div className="p-6 rounded-xl border border-zinc-200 hover:border-primary transition-colors">
                   <h4 className={`${marcellus.className} text-xl text-foreground mb-2`}>Ouderdomsvlekken 1-3 vlekken</h4>
-                  <p className={`${syne.className} text-zinc-600 mb-3`}>20 minuten - €90</p>
-                  <p className={`${syne.className} text-sm text-zinc-600`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-3`}>20 minuten - €90</p>
+                  <p className={`${outfit.className} text-sm text-zinc-600`}>
                     Ideaal voor enkele kleine pigmentvlekken op gezicht of handen
                   </p>
                 </div>
 
                 <div className="p-6 rounded-xl border border-zinc-200 hover:border-primary transition-colors">
                   <h4 className={`${marcellus.className} text-xl text-foreground mb-2`}>Ouderdomsvlekken 4-6 vlekken</h4>
-                  <p className={`${syne.className} text-zinc-600 mb-3`}>30 minuten - €120</p>
-                  <p className={`${syne.className} text-sm text-zinc-600`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-3`}>30 minuten - €120</p>
+                  <p className={`${outfit.className} text-sm text-zinc-600`}>
                     Voor meerdere pigmentvlekken in één gebied
                   </p>
                 </div>
 
                 <div className="p-6 rounded-xl border border-zinc-200 hover:border-primary transition-colors">
                   <h4 className={`${marcellus.className} text-xl text-foreground mb-2`}>Hele gezicht</h4>
-                  <p className={`${syne.className} text-zinc-600 mb-3`}>50 minuten - €185</p>
-                  <p className={`${syne.className} text-sm text-zinc-600`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-3`}>50 minuten - €185</p>
+                  <p className={`${outfit.className} text-sm text-zinc-600`}>
                     Volledige gezichtsbehandeling voor verspreid pigment
                   </p>
                 </div>
 
                 <div className="p-6 rounded-xl border border-zinc-200 hover:border-primary transition-colors">
                   <h4 className={`${marcellus.className} text-xl text-foreground mb-2`}>Melasma behandeling</h4>
-                  <p className={`${syne.className} text-zinc-600 mb-3`}>40 minuten - €175</p>
-                  <p className={`${syne.className} text-sm text-zinc-600`}>
+                  <p className={`${outfit.className} text-zinc-600 mb-3`}>40 minuten - €175</p>
+                  <p className={`${outfit.className} text-sm text-zinc-600`}>
                     TCA behandeling specifiek voor melasma
                   </p>
                 </div>
@@ -181,7 +181,7 @@ export default function PigmentvlekkenVerwijderenPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className={`${syne.className} text-zinc-600 mt-4`}>
+                  <p className={`${outfit.className} text-zinc-600 mt-4`}>
                     Voor ouderdomsvlekken (lentigo solaris) zijn gemiddeld 1-3 behandelingen nodig. Melasma vereist vaak een langer traject van 3-6 maanden. Tijdens het gratis consult bepalen we het aantal behandelingen.
                   </p>
                 </details>
@@ -193,7 +193,7 @@ export default function PigmentvlekkenVerwijderenPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className={`${syne.className} text-zinc-600 mt-4`}>
+                  <p className={`${outfit.className} text-zinc-600 mt-4`}>
                     De prijs hangt af van het aantal en de grootte van de vlekken. Prijzen variëren van €90 voor 1-3 kleine vlekken tot €185 voor het hele gezicht. Zie bovenstaand overzicht voor alle prijzen.
                   </p>
                 </details>
@@ -205,7 +205,7 @@ export default function PigmentvlekkenVerwijderenPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className={`${syne.className} text-zinc-600 mt-4`}>
+                  <p className={`${outfit.className} text-zinc-600 mt-4`}>
                     De picolaser voelt aan als kleine elastiekjes tegen de huid. De meeste mensen ervaren dit als goed verdraagbaar. De behandeling duurt slechts enkele minuten.
                   </p>
                 </details>
@@ -217,7 +217,7 @@ export default function PigmentvlekkenVerwijderenPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <p className={`${syne.className} text-zinc-600 mt-4`}>
+                  <p className={`${outfit.className} text-zinc-600 mt-4`}>
                     Behandelde pigmentvlekken komen niet terug. Wel kunnen nieuwe vlekken ontstaan door zonblootstelling. Daarom adviseren we dagelijks SPF 50+ te gebruiken ter preventie.
                   </p>
                 </details>
@@ -234,18 +234,18 @@ export default function PigmentvlekkenVerwijderenPage() {
             <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
               Laat je pigmentvlekken verwijderen in Rijswijk
             </h2>
-            <p className={`${syne.className} text-lg text-zinc-600 mb-8`}>
+            <p className={`${outfit.className} text-lg text-zinc-600 mb-8`}>
               Plan een gratis consult bij Aboré Huidkliniek en ontdek welke behandeling het beste bij jou past
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://abor.boekingapp.nl/" className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg`}>
+              <a href="https://abor.boekingapp.nl/" className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg`}>
                 Boek gratis consult
               </a>
-              <a href="/contact" className={`${syne.className} inline-flex items-center gap-2 rounded-full border-2 border-primary px-10 py-4 text-primary hover:bg-primary hover:text-white transition-all`}>
+              <a href="/contact" className={`${outfit.className} inline-flex items-center gap-2 rounded-full border-2 border-primary px-10 py-4 text-primary hover:bg-primary hover:text-white transition-all`}>
                 Stel een vraag
               </a>
             </div>
-            <p className={`${syne.className} text-sm text-zinc-500 mt-6`}>
+            <p className={`${outfit.className} text-sm text-zinc-500 mt-6`}>
               📍 Waldhoornplein 14, Rijswijk | ☎️ +31 6 34 53 33 58 | Ook voor cliënten uit Den Haag, Delft en omgeving
             </p>
           </div>

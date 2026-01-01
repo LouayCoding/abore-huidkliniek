@@ -23,13 +23,13 @@ export default function VerschilAcneRosaceaPage() {
         
         <Container className="relative z-10">
           <div className="max-w-3xl">
-            <span className={`${syne.className} inline-block rounded-full bg-primary/20 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white mb-4`}>
+            <span className={`${outfit.className} inline-block rounded-full bg-primary/20 backdrop-blur-sm px-4 py-2 text-sm font-medium text-white mb-4`}>
               Acne & Rosacea
             </span>
             <h1 className={`${marcellus.className} text-4xl sm:text-5xl md:text-6xl text-white mb-4`}>
               Wat is het verschil tussen acne en rosacea?
             </h1>
-            <div className={`${syne.className} flex items-center gap-4 text-sm text-white/80`}>
+            <div className={`${outfit.className} flex items-center gap-4 text-sm text-white/80`}>
               <span>15 januari 2025</span>
               <span>•</span>
               <span>5 min leestijd</span>
@@ -42,7 +42,7 @@ export default function VerschilAcneRosaceaPage() {
       <section className="bg-white">
         <Container className="py-20 sm:py-32">
           <div className="mx-auto max-w-3xl">
-            <div className={`${syne.className} prose prose-lg max-w-none`}>
+            <div className={`${outfit.className} prose prose-lg max-w-none`}>
               <p className="text-xl text-zinc-700 leading-relaxed mb-8">
                 Veel mensen verwarren acne met rosacea, en dat is niet gek. Beide aandoeningen veroorzaken rode huid en puistjes, maar de oorzaken en behandelingen zijn totaal verschillend. Bij <strong>Aboré Huidkliniek in Rijswijk</strong> zien we dit dagelijks en helpen we je de juiste diagnose en behandeling te vinden.
               </p>
@@ -249,7 +249,7 @@ export default function VerschilAcneRosaceaPage() {
               <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>
                 Microneedling voor acne littekens
               </h3>
-              <p className={`${syne.className} text-sm text-zinc-600`}>
+              <p className={`${outfit.className} text-sm text-zinc-600`}>
                 Alles over microneedling voor littekens
               </p>
             </a>
@@ -257,7 +257,7 @@ export default function VerschilAcneRosaceaPage() {
               <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>
                 Pigmentvlekken: oorzaken en behandelingen
               </h3>
-              <p className={`${syne.className} text-sm text-zinc-600`}>
+              <p className={`${outfit.className} text-sm text-zinc-600`}>
                 Van ouderdomsvlekken tot melasma
               </p>
             </a>
@@ -265,7 +265,7 @@ export default function VerschilAcneRosaceaPage() {
               <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>
                 Acne behandeling Rijswijk
               </h3>
-              <p className={`${syne.className} text-sm text-zinc-600`}>
+              <p className={`${outfit.className} text-sm text-zinc-600`}>
                 Bekijk alle acne behandelingen
               </p>
             </a>
@@ -280,12 +280,12 @@ export default function VerschilAcneRosaceaPage() {
             <h2 className={`${marcellus.className} text-3xl sm:text-4xl text-foreground mb-4`}>
               Twijfel je tussen acne of rosacea?
             </h2>
-            <p className={`${syne.className} text-lg text-zinc-600 mb-8`}>
+            <p className={`${outfit.className} text-lg text-zinc-600 mb-8`}>
               Plan een gratis huidanalyse bij Aboré Huidkliniek in Rijswijk
             </p>
             <a
               href="https://abor.boekingapp.nl/"
-              className={`${syne.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
+              className={`${outfit.className} inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-white hover:bg-primary-hover transition-all shadow-lg shadow-primary/20`}
             >
               Boek gratis consult
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

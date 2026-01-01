@@ -20,7 +20,7 @@ export default function DisclaimerPage() {
           <h1 className={`${marcellus.className} text-4xl sm:text-5xl text-foreground text-center`}>
             Disclaimer
           </h1>
-          <p className={`${syne.className} text-zinc-600 text-center mt-4`}>
+          <p className={`${outfit.className} text-zinc-600 text-center mt-4`}>
             Laatst bijgewerkt: December 2024
           </p>
         </Container>
@@ -29,7 +29,7 @@ export default function DisclaimerPage() {
       {/* Content */}
       <section className="bg-white">
         <Container className="py-16 sm:py-20">
-          <div className={`${syne.className} prose prose-lg max-w-4xl mx-auto text-zinc-700`}>
+          <div className={`${outfit.className} prose prose-lg max-w-4xl mx-auto text-zinc-700`}>
             
             <h2 className={`${marcellus.className} text-2xl text-foreground mt-8 mb-4`}>
               Algemeen
