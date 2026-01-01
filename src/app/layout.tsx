@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 // fonts moved to src/lib/fonts for reuse
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://huidkliniekabore.nl"),
   title: "Huidkliniek Rijswijk | Laser & Acne Behandelingen | Aboré",
   description: "Luxe huidkliniek in Rijswijk. ✓ Laserontharing ✓ Acne behandeling ✓ Pigmentvlekken ✓ Huidverjonging. 10+ jaar ervaring. Boek gratis consult.",
   keywords: ["huidkliniek Rijswijk", "laserontharing", "acne behandeling", "pigmentvlekken verwijderen", "huidverjonging", "tatoeage verwijderen", "huidkliniek Den Haag"],
@@ -44,10 +45,6 @@ export const metadata: Metadata = {
     description: "Luxe huidkliniek in Rijswijk. Laserontharing, acne behandeling en huidverjonging. Boek gratis consult.",
     images: ["/hero/11.jpg"],
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#ffffff" },
-  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -68,6 +65,10 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#ffffff" },
+  ],
 };
 
 export default function RootLayout({

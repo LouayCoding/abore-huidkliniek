@@ -6,52 +6,68 @@ import type { Testimonial, AggregateRating } from '@/types';
  */
 export const testimonials: Testimonial[] = [
   { 
-    name: "Sara M.", 
-    text: "Professioneel, vriendelijk en resultaat al na één sessie. De kliniek straalt luxe uit en het personeel neemt echt de tijd voor je.", 
+    name: "Annette N.", 
+    text: "Yousara is een heel vriendelijke vrouw die perfect je huid beoordeeld en behandeld. Een mooie praktijk met moderne apparatuur. Na 2 behandelingen was mijn huid vrij van bruine ouderdomsvlekken. Zeer aanbevolen.", 
     rating: 5, 
-    date: "2025-04-12",
+    date: "2024-09-20",
     treatment: "Pigmentbehandeling",
-    initial: "S"
+    initial: "A"
   },
   { 
-    name: "Noor A.", 
-    text: "Luxe gevoel en duidelijke uitleg. Echt aan te raden. Ik voel me hier altijd welkom en op mijn gemak.", 
+    name: "Amal E.", 
+    text: "Top ervaring! De huidtherapeut neemt de tijd om je gerust te stellen en levert secuur werk, een aanrader voor een ieder!", 
     rating: 5, 
-    date: "2025-05-03",
-    treatment: "Laserontharing",
-    initial: "N"
+    date: "2024-08-15",
+    treatment: "Huidbehandeling",
+    initial: "A"
   },
   { 
-    name: "Yasmin K.", 
-    text: "Veilig en zorgvuldig gewerkt. Mijn huid straalt weer en ik heb eindelijk mijn zelfvertrouwen terug.", 
+    name: "Esther G.", 
+    text: "Van mijn eerste consult voelde ik me op me gemak. Zorgzamen lieve huidtherapeut, die weet wat ze doet. Mooie resultaten behaald, ben zeer tevreden!", 
     rating: 5, 
-    date: "2025-02-21",
+    date: "2024-09-10",
+    treatment: "Huidverjonging",
+    initial: "E"
+  },
+  { 
+    name: "Renusha B.", 
+    text: "Yousara is een heel fijn persoon om door behandeld te worden. Ze neemt de tijd, en geeft duidelijke uitleg. Ik help mijn resultaten te behalen, heb ik alle vertrouwen in. Praktijk is heel mooi en hygiënisch.", 
+    rating: 5, 
+    date: "2024-07-18",
     treatment: "Acne behandeling",
-    initial: "Y"
+    initial: "R"
   },
   { 
-    name: "Fatima R.", 
-    text: "Eindelijk een kliniek die écht luistert. Mijn pigmentvlekken zijn zichtbaar verminderd en ik ben super blij met het resultaat.", 
+    name: "Ferdaous E.", 
+    text: "Weer een hele fijne behandeling gehad. Dit keer heb de salicylzuur peeling gedaan.", 
     rating: 5, 
-    date: "2025-03-15",
-    treatment: "Pigmentbehandeling",
+    date: "2024-10-02",
+    treatment: "Peeling",
     initial: "F"
   },
   { 
-    name: "Layla H.", 
-    text: "Geen pijn, geen stress. De behandeling was comfortabel en het resultaat is fantastisch. Ik kom zeker terug!", 
+    name: "Fatima G.", 
+    text: "Vakkundig, betrouwbaar, professioneel en erg vriendelijk.", 
     rating: 5, 
-    date: "2025-01-08",
-    treatment: "Huidverjonging",
-    initial: "L"
+    date: "2024-09-05",
+    treatment: "Huidbehandeling",
+    initial: "F"
   },
   { 
-    name: "Amira S.", 
-    text: "Mijn acne is onder controle dankzij hun expertise. Ik voel me eindelijk zelfverzekerd en dat is onbetaalbaar.", 
+    name: "Mokhtar A.", 
+    text: "Ik ben heel goed behandeld! Schoon praktijk. En klant vriendelijk.", 
     rating: 5, 
-    date: "2025-04-28",
-    treatment: "Acne behandeling",
-    initial: "A"
+    date: "2024-07-25",
+    treatment: "Laserontharing",
+    initial: "M"
+  },
+  { 
+    name: "Wendel K.", 
+    text: "Keurig op tijd, ik ben uitstekend geïnformeerd over de komende behandeling. Mijn dank.", 
+    rating: 4, 
+    date: "2024-09-28",
+    treatment: "Consult",
+    initial: "W"
   },
 ];
 
