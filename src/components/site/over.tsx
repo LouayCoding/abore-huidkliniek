@@ -64,7 +64,7 @@ export function OverOns() {
               Bij <span className="text-primary">Aboré</span> draait het om jou! Jouw huid, jouw moment, jouw zorg.
             </h2>
             <p className={`${outfit.className} text-base sm:text-lg text-zinc-600 leading-relaxed mb-10`}>
-              Bij Aboré werken uitsluitend gediplomeerde huidtherapeuten, zodat je altijd verzekerd bent van deskundige zorg. We nemen de tijd voor jou, werken met hoogwaardige medische apparatuur, en passen alleen behandelingen toe die wetenschappelijk onderbouwd zijn. We blijven ons voortdurend ontwikkelen in de nieuwste technologieën, zodat jij altijd profiteert van de meest effectieve huidzorg. Zo krijg jij precies de zorg die bij jouw huid past. TEST123
+              Bij Aboré werken uitsluitend gediplomeerde huidtherapeuten, zodat je altijd verzekerd bent van deskundige zorg. We nemen de tijd voor jou, werken met hoogwaardige medische apparatuur, en passen alleen behandelingen toe die wetenschappelijk onderbouwd zijn. We blijven ons voortdurend ontwikkelen in de nieuwste technologieën, zodat jij altijd profiteert van de meest effectieve huidzorg. Zo krijg jij precies de zorg die bij jouw huid past.
             </p>
 
             {/* CTA - Clear hierarchy */}
