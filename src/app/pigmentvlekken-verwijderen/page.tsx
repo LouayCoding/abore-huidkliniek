@@ -70,7 +70,7 @@ export default function PigmentvlekkenVerwijderenPage() {
             
             <div className={`${outfit.className} prose prose-lg max-w-none text-zinc-700 space-y-6`}>
               <p>
-                Pigmentvlekken, ook wel ouderdomsvlekken of lentigo solaris genoemd, zijn een veelvoorkomend huidprobleem. Bij Aboré Huidkliniek in Rijswijk verwijderen we pigmentvlekken effectief en veilig met geavanceerde picolaser technologie.
+                Pigmentvlekken zijn een veelvoorkomend huidprobleem. Bij Aboré Huidkliniek in Rijswijk verwijderen we pigmentvlekken effectief en veilig met geavanceerde picolaser technologie.
               </p>
 
               <p>
