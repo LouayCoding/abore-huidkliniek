@@ -425,7 +425,7 @@ export default function AcneBehandelingPage() {
                   </div>
                   <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>6+ Jaar Ervaring</h3>
                   <p className={`${outfit.className} text-sm text-zinc-600`}>
-                    Duizenden tevreden cliënten met zichtbare resultaten
+                    Sinds 2020 behandelen we succesvol acne en rosacea. Duizenden tevreden cliënten gingen je voor met zichtbare resultaten.
                   </p>
                 </div>
 
