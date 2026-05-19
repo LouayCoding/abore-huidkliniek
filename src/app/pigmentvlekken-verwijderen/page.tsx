@@ -166,7 +166,7 @@ export default function PigmentvlekkenVerwijderenPage() {
               </h3>
 
               <p>
-                Voor hardnekkig melasma bieden we ook de Cosmelan (€700, 3 maanden traject) en Dermamelan (€900, 4 maanden traject) behandelingen. Deze medische depigmentatie methodes zijn wereldwijd erkend als de meest effectieve behandeling voor melasma.
+                Voor hardnekkig melasma bieden wij Cosmelan (€700, 3 maanden traject) en Dermamelan (€900, 4 maanden traject) aan. Deze medische depigmentatiebehandelingen behoren wereldwijd tot de meest effectieve methodes tegen melasma. Het traject is volledig inclusief de benodigde thuiszorgproducten, zodat je de behandeling thuis optimaal kunt voortzetten en het resultaat kunt versterken.              
               </p>
 
               <h3 className={`${marcellus.className} text-2xl text-foreground mt-8 mb-4`}>
