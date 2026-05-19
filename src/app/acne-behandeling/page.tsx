@@ -31,6 +31,10 @@ const acneFaqSchema = faqSchema([
   {
     question: "Kan ik acne littekens laten behandelen?",
     answer: "Ja, microneedling en TCA Cross zijn zeer effectief voor acne littekens. Resultaat zichtbaar na 3-6 behandelingen."
+  },
+  {
+    question: "Kan ik na de behandeling direct weer naar buiten?",
+    answer: "Ja, maar vermijd direct zonlicht in de eerste dagen na de behandeling. De huid kan tijdelijk gevoeliger zijn, met lichte roodheid of schilfering afhankelijk van de behandeling. Gebruik daarom altijd SPF 50+ voor optimale bescherming."
   }
 ]);
 
