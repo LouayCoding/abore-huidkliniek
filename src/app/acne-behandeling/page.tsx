@@ -244,7 +244,7 @@ export default function AcneBehandelingPage() {
                     </div>
                     <h3 className={`${marcellus.className} text-xl text-foreground mb-3`}>Diepte Reiniging</h3>
                     <p className={`${outfit.className} text-sm text-zinc-600`}>
-                      Intensieve reiniging waarbij we talg, mee-eters en onzuiverheden verwijderen. Geschikt voor actieve acne en onzuivere huid.
+                      Intensieve reiniging waarbij we talg, mee-eters en onzuiverheden verwijderen. De behandeling bestaat uit extracties, gevolgd door een diep reinigend masker en hydraterende nazorgproducten.
                     </p>
                   </div>
 
@@ -256,7 +256,7 @@ export default function AcneBehandelingPage() {
                     </div>
                     <h3 className={`${marcellus.className} text-xl text-foreground mb-3`}>Medische Peelings</h3>
                     <p className={`${outfit.className} text-sm text-zinc-600`}>
-                      Mesoestetic peelings specifiek ontwikkeld voor acne en rosacea. Vermindert ontstekingen en reguleert talgproductie.
+                      Mesoestetic peelings specifiek ontwikkeld voor acne en rosacea. Vermindert ontstekingen en reguleert talgproductie. Bij het opstellen van het behandelplan wordt het meest geschikte fruitzuur peeling gekozen voor optimale resultaten.
                     </p>
                   </div>
 
@@ -401,7 +401,7 @@ export default function AcneBehandelingPage() {
                   </div>
                   <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>Geregistreerde Huidtherapeuten</h3>
                   <p className={`${outfit.className} text-sm text-zinc-600`}>
-                    ANBOS geregistreerd met continue bij- en nascholingen
+                    Onze huidtherapeuten zijn KP-geregistreerde paramedici en vallen onder artikel 34 van de Wet BIG. Zij volgen continu bij- en nascholingen om te werken met de nieuwste technieken.
                   </p>
                 </div>
 
@@ -411,9 +411,9 @@ export default function AcneBehandelingPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                     </svg>
                   </div>
-                  <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>Premium Apparatuur</h3>
+                  <h3 className={`${marcellus.className} text-lg text-foreground mb-2`}>Hoogwaardige Merken & Technologie</h3>
                   <p className={`${outfit.className} text-sm text-zinc-600`}>
-                    CE-gecertificeerde apparatuur van topmerken zoals Mesoestetic
+                    Wij werken uitsluitend met hoogwaardige apparatuur en medische producten van toonaangevende merken, zoals Mesoestetic, LPG Endermologie, Pico-laser, Diode Ice, Microneedling, HairXL en Rejuran.
                   </p>
                 </div>
 
