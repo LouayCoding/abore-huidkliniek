@@ -6,7 +6,7 @@ import type { FAQ } from '@/types';
  */
 export const faqs: FAQ[] = [
   { 
-    q: "Doet laserbehandeling pijn?", 
+    q: "Doet de laserbehandeling pijn?", 
     a: "De meeste cliënten ervaren een warm, tintelend gevoel. We werken met geavanceerde koelsystemen en stellen de intensiteit zorgvuldig af op jouw huid en pijntolerantie. Comfort staat voorop.",
     category: "Behandeling"
   },
@@ -26,7 +26,7 @@ export const faqs: FAQ[] = [
     category: "Resultaten"
   },
   { 
-    q: "Is laserbehandeling veilig voor mijn huid?", 
+    q: "Is de laserbehandeling veilig voor mijn huid?", 
     a: "Absoluut. We gebruiken uitsluitend CE-gecertificeerde apparatuur en volgen strikte veiligheidsprotocollen. Onze specialisten zijn volledig gecertificeerd en passen de behandeling aan op jouw specifieke huidtype.",
     category: "Veiligheid"
   },
