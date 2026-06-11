@@ -4,6 +4,7 @@ import { lexend, marcellus, outfit } from "@/lib/fonts";
 import "./globals.css";
 import { CookieBanner } from "@/components/site/cookie-banner";
 import { WhatsAppButton } from "@/components/site/whatsapp-button";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,6 +85,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <CookieBanner />
+        <GoogleAnalytics gaId="G-MGH8QMTDZ5" />
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ import type { Testimonial, AggregateRating } from '@/types';
 export const testimonials: Testimonial[] = [
   { 
     name: "Annette N.", 
-    text: "Yousara is een heel vriendelijke vrouw die perfect je huid beoordeeld en behandeld. Een mooie praktijk met moderne apparatuur. Na 2 behandelingen was mijn huid vrij van bruine ouderdomsvlekken. Zeer aanbevolen.", 
+    text: "Youssra is een heel vriendelijke vrouw die perfect je huid beoordeeld en behandeld. Een mooie praktijk met moderne apparatuur. Na 2 behandelingen was mijn huid vrij van bruine ouderdomsvlekken. Zeer aanbevolen.", 
     rating: 5, 
     date: "2024-09-20",
     treatment: "Pigmentbehandeling",
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
   },
   { 
     name: "Renusha B.", 
-    text: "Yousara is een heel fijn persoon om door behandeld te worden. Ze neemt de tijd, en geeft duidelijke uitleg. Ik help mijn resultaten te behalen, heb ik alle vertrouwen in. Praktijk is heel mooi en hygiënisch.", 
+    text: "Youssra is een heel fijn persoon om door behandeld te worden. Ze neemt de tijd, en geeft duidelijke uitleg. Ik help mijn resultaten te behalen, heb ik alle vertrouwen in. Praktijk is heel mooi en hygiënisch.", 
     rating: 5, 
     date: "2024-07-18",
     treatment: "Acne behandeling",
